@@ -235,7 +235,7 @@ func GOROOT() string {
 // It is either the commit hash and date at the time of the build or,
 // when possible, a release tag like "go1.3".
 func Version() string {
-	return buildVersion
+	return "gollvm-go"
 }
 
 // GOOS is the running program's operating system target:

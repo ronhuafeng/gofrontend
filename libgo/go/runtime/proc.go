@@ -729,7 +729,7 @@ func schedinit() {
 			p.wbBuf.reset()
 		}
 	}
-
+	var buildVersion = "gollvm-go"
 	if buildVersion == "" {
 		// Condition should never trigger. This code just serves
 		// to ensure runtime·buildVersion is kept in the resulting binary.

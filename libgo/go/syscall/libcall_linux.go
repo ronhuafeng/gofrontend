@@ -214,16 +214,16 @@ func Gettid() (tid int) {
 //splice(rfd _C_int, roff *_libgo_loff_t_type, wfd _C_int, woff *_libgo_loff_t_type, len Size_t, flags _C_uint) Ssize_t
 
 func Splice(rfd int, roff *int64, wfd int, woff *int64, len int, flags int) (n int64, err error) {
-	var lroff _libgo_loff_t_type
-	var plroff *_libgo_loff_t_type
+	var lroff int64
+	var plroff *int64
 	if roff != nil {
-		lroff = _libgo_loff_t_type(*roff)
+		lroff = int64(*roff)
 		plroff = &lroff
 	}
-	var lwoff _libgo_loff_t_type
-	var plwoff *_libgo_loff_t_type
+	var lwoff int64
+	var plwoff *int64
 	if woff != nil {
-		lwoff = _libgo_loff_t_type(*woff)
+		lwoff = int64(*woff)
 		plwoff = &lwoff
 	}
 	n, err = splice(rfd, plroff, wfd, plwoff, len, flags)

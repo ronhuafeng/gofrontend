@@ -410,7 +410,7 @@ func dumpparams() {
 	dumpint(uint64(arenaStart))
 	dumpint(uint64(arenaEnd))
 	dumpstr(goarch.GOARCH)
-	dumpstr(buildVersion)
+	dumpstr("gollvm-go")
 	dumpint(uint64(ncpu))
 }
 
